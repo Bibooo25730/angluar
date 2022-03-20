@@ -14,7 +14,8 @@ import { MuHostComponent } from './mu-host/mu-host.component';
 import { MywordPie } from "./mu-host/mu-host-prop"
 import {UserListService} from "./server/user_server";
 import { ServerComponent } from './my-server/my-server.component';
-import { MyHttpComponent } from './my-http/my-http.component'
+import { MyHttpComponent } from './my-http/my-http.component';
+import { MyParamsComponent } from './my-params/my-params.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { MyHttpComponent } from './my-http/my-http.component'
     MuHostComponent,
     MywordPie,
     ServerComponent,
-    MyHttpComponent
+    MyHttpComponent,
+    MyParamsComponent
   ],
   imports: [
     BrowserModule,
