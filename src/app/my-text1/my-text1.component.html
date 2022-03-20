@@ -1,0 +1,41 @@
+<p>my-text1 works!</p>
+<hr/>
+
+<p [style.color] = "'red'">HH</p>
+
+<h1 [style.fontSize.px] = "'20'">LALA</h1>
+
+<span [ngStyle]="{'color':'green'}">lv</span>
+
+<p [class.orange] ="true">有</p>
+<p [class.orange] ="false">无</p>
+
+<hr/>
+
+<button [disabled] = 'true'>ll</button>
+
+<hr/>
+
+<button (click)="handleClick($event)">Ref</button>
+
+<button (click)="handleConut()">自定义事件</button>
+
+<hr/>
+<!-- 双向绑定 -->
+<input [(ngModel)]="title" type="text" name="" id="">
+<p>{{title}}</p>
+
+<!-- 父传的值 -->
+{{father3}}
+
+<div id="aa" >我就是用ID</div>
+
+
+<hr/>
+
+<app-my-text2 #child [name]="name" (soncfu)="handleSon($event)" ></app-my-text2>
+<button (click)="child.text()">拿子的方法和变量</button>
+<hr/>
+<input value="blue" type="text" name="" id="">
+
+<div [HighSytle]="'blue'">自定义指令</div>

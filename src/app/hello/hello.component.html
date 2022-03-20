@@ -1,0 +1,45 @@
+<div class="Hello">
+    <p *ngIf="true">hello works!</p>
+    <!-- ngIf -->
+<hr/>
+<ul>
+    <li *ngFor="let item of array; let i=index; let odd=odd; trackBy: trackById" >{{item.name}}--{{i}}--{{odd}}</li>
+</ul>
+<!-- ngFor -->
+<hr/>
+
+<div [ngSwitch]="isShow">
+<p *ngSwitchCase="'A'">
+    你成绩好
+</p>
+<p *ngSwitchCase="'B'">
+   你成绩差
+</p>
+<p *ngSwitchDefault>
+   默认你成绩差
+</p>
+</div>
+<hr/>
+<span>{{count}}</span>
+
+<app-my-text1  (myclick)="handleConut($event)" ></app-my-text1>
+<app-my-text1  [father2]="father" (mymessage)="'HAHAHA'" ></app-my-text1>
+
+
+<h1>样式</h1>
+<app-mu-host></app-mu-host>
+
+<div class="italic">
+    <div>
+        <app-mu-host class="active"></app-mu-host>
+    </div>
+</div>
+
+
+<app-mu-host ></app-mu-host>
+
+<hr/>
+<app-my-server></app-my-server>
+
+<app-my-http></app-my-http>
+</div>

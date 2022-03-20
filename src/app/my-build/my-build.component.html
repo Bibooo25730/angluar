@@ -1,0 +1,25 @@
+<p>my-build works!</p>
+
+<hr/>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" >
+    <input type="text" name="name"  formControlName="name"  >
+    <label >姓名:</label>
+    <input type="text" name="pwd" formControlName="pwd" >
+    <label >密码:</label>
+    
+
+
+<div FormGroupName="address">
+    <div>
+        <label for="">街道：</label>
+        <input type="text" name="street"  formControlName="street">
+    </div>
+    <div>
+        <label for="">城市：</label>
+        <input type="text" name="city" formControlName="city">
+    </div>
+</div>
+<input type="submit" value="提交" >
+
+</form>

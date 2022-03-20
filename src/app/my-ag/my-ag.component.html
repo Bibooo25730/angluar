@@ -1,0 +1,40 @@
+<p style="color: rebeccapurple;">my-ag works!</p>
+<!-- 
+<input type="text" #phone="ngModel" required [(ngModel)]="name" minlength="4"  (change)="handleChange(phone)"> -->
+
+<!-- <input type="text" (change)="handleChange($event)"> -->
+<!-- <p>valid {{phone.valid}}</p>
+<p>dirty {{phone.dirty}}</p>
+<p>touched {{phone.touched}}</p>
+
+<p>errors {{phone.errors | json }}</p> -->
+
+<hr/>
+
+<!-- <form (ngSubmit)="onSubmit($event)">
+    <input  type="text" 
+    name="name"
+     maxlength="4"
+     #inpus="ngModel"
+     [(ngModel)] = "name"
+     required
+    >
+    <button type="submit" [disabled]="!inpus.valid">Submit</button>
+</form> -->
+
+<h1>样式</h1>
+<form [formGroup]="myGruop" (ngSubmit)="onSubmit()">
+    <input 
+    name="name"
+    formControlName="name"
+    novalidate
+    >
+    <input 
+    name="name"
+    formControlName="pwd"
+    novalidate
+    >
+    <button type="submit" >Submit</button>
+</form>
+
+<app-my-build></app-my-build>
