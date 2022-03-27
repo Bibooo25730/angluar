@@ -530,5 +530,44 @@ this.router.navigate(['hello']) 这个也可以跳转
 
 #### 基础过一下（等练手,再补充）
 
+### 子路由
+
+**ng g m home --routing**
+
+RouterModule.forRoot(routes) RouterModule.forChild(routes) 
+
+我尝试创建一个子路由导航遇到了报错
+
+<img src="https://s3.bmp.ovh/imgs/2022/03/5c1e86f641c76e09.png">
+
+- 该`forRoot()`方法创建一个`NgModule`包含所有指令、给定路由和`Router`服务本身的一个。
+- 该`forChild()`方法创建一个`NgModule`包含所有指令和给定路由的，但不包括`Router`服务。 （子路由）
+
+** 延迟加载功能模块 **
+
+公司里面用了 loadChildren: () => import('./items/items.module').then(m => m.ItemsModule) 刚开始我以为就是动态加载；
+
+他是加载一个模块不是一个组件，这是跟 vue recat 不一样的
+
+**ng g m module**
+
+## 管理组件模块
+
+<img src='https://s3.bmp.ovh/imgs/2022/03/8eeb0c7a63823c94.png'>
+
+### 懒加载 loadChildren
+
+路由依据 loadChildren 属性 配置的路径加载 xxx 模块，当访问 xxx 路径时，才会加载 xxx 模块，这减少了应用启动时加载资源的大小。
+
+它加载的是一个模块 里面配置路由信息 这些路由都是 loadChildren 的子路由；
+
+## 服务
+
+
+
+### 仿实战
+
+**面包屑** **筛选** **浏览器缓存** **图片懒加载** **分页** **NG-ZORRO** **置顶**
+
 
 
